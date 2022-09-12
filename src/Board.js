@@ -44,6 +44,7 @@ function Board({ nrows=5, ncols=5, chanceLightStartsOn=.3 }) {
     }
 
     console.log(board);
+    return board;
   }
 
   function hasWon() {
@@ -101,7 +102,11 @@ function Board({ nrows=5, ncols=5, chanceLightStartsOn=.3 }) {
       }
       tblBoard.push(<tr key={x}>{row}</tr>);
   }
-
+  return (
+    <table className="Board">
+    <tbody>{tblBoard}</tbody>
+    </table>
+    );
 
 }
 
